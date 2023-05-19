@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinalTask2</title>
+</head>
+<style>
+    .product
+    {
+        border: 1px solid gray;
+        display: inline-block;
+    }
+
+    .orderSum
+    {
+        border: 1px solid gray;
+        display: inline-block;
+        padding: 10px;
+    }
+</style>
+<script>
+    const dSign = "$";
+    const itemPrice = 15.97;
+    let item = 0;
+    function plusSign(){
+        item += 1;
+        document.getElementById("basketball").value = item;
+        }
+    
+        function deducSign(){
+        item -= 1;
+        document.getElementById("basketball").value = item;
+        }
+
+        function orderSum(){
+            document.getElementById("items").innerHTML = "("+item+")";
+        }
+</script>
+<body>
+    <div class="product" style="padding: 10px;">
+        Basketball Products: <input type="text" id="basketball" size="2" value="0">
+        <button onclick="plusSign()">+</button>
+        <button onclick="deducSign()">-</button>
+        <p></p>
+        Shipping and Handling Fee: <input type="text" id="shipping" size="2" value="4.99">
+    </div>
+
+    <div class="orderSum">
+        <h2>Order Summary</h2>
+        <p>Items</p><p id="items":></p>
+        <p>Shipping and handling:</p>
+        <p>Total before tax:</p>
+        <p>Estimated tax (10%):</p>
+
+    </div>
+</body>
+</html>
